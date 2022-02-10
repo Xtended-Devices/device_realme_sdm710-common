@@ -19,3 +19,8 @@ allow init sysfs_mmc_host:file { open write };
 allow init update_engine_exec:process { sigkill transition };
 allow init hwservicemanager:binder { call transfer };
 allow init vfat:dir search;
+
+allow init init:capability2 { mac_admin };
+allow init sysfs_battery_supply:file { setattr };
+allow init vendor_file:file { execute_no_trans };
+allow init vendor_toolbox_exec:file { execute_no_trans };

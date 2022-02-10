@@ -20,3 +20,10 @@ get_prop(vendor_init, persist_debug_prop)
 allow vendor_init oppo_wlan_prop:file { open read getattr };
 
 set_prop(vendor_init, freq_prop);
+
+allow vendor_init bluetooth_prop:file { read };
+allow vendor_init default_prop:file { read };
+allow vendor_init dhcp_data_file:dir { getattr  setattr };
+allow vendor_init media_rw_data_file:dir { getattr  setattr };
+allow vendor_init radio_prop:file { read };
+allow vendor_init wifi_prop:file { read };
